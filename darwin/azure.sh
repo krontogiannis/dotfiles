@@ -1,0 +1,2 @@
+export azurestorageconn="DefaultEndpointsProtocol=https;AccountName=mbraceclusterstorage;AccountKey=yehOdKgTNTuWo6OSB27K18iMphW1eJx9cCcxxGch3I7VsYtqU+jINlL2DYZ3UUEB8CfdhqKctE5VUQSssfA13Q=="
+export azureservicebusconn="Endpoint=sb://mbracecluster.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=II6iI8cR0kOsOUwJIVM8t9XlDZFgKTITerc6MWaa8ok="
