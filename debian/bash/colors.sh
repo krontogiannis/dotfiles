@@ -10,6 +10,7 @@ Blue='\e[0;34m'         # Blue
 Purple='\e[0;35m'       # Purple
 Cyan='\e[0;36m'         # Cyan
 White='\e[0;37m'        # White
+Orange='\e[38;5;9m'
 
 # Bold
 BBlack='\e[1;30m'       # Black

@@ -8,6 +8,7 @@ bind "set show-all-if-ambiguous on"
 alias e=$EDITOR
 alias m='make -j 8'
 alias c=clear
+alias ls='ls --color=auto'
 alias la='ls -la'
 alias l='ls -l'
 alias s=''
@@ -32,7 +33,7 @@ GIT_PS1_SHOWUPSTREAM="auto, verbose"
 
 fancy_prompt() {
     if [ "$(id -u)" != "0" ] ; then
-        local SIMPLE="\[$BIYellow\]> \[$Color_Reset\]"
+        local SIMPLE="\[$Orange\]> \[$Color_Reset\]"
     else
         local SIMPLE="\[$BIRed\]# \[$Color_Reset\]"
     fi;
@@ -43,7 +44,7 @@ fancy_prompt() {
         local ITEMS=`ls -1 . | wc -l | xargs`
         local UPTIME=`uptime | tr "," " " | cut -f4-5 -d" " | xargs`
         local PSCOUNT=`ps -A | wc -l | xargs`
-        __git_ps1 "\[$IYellow\]\u\[$Color_Reset\] at \[$IYellow\]\H\[$Color_Reset\] : \[$BICyan\]\$PWD \[$ICyan\]total $ITEMS\[$IWhite\] uptime $UPTIME, $PSCOUNT processes\[$Color_Reset\]" "\n$SIMPLE"
+        __git_ps1 "\[$Orange\]\u\[$Color_Reset\] at \[$Orange\]\H\[$Color_Reset\] : \[$BICyan\]\$PWD \[$ICyan\]total $ITEMS\[$IWhite\] uptime $UPTIME, $PSCOUNT processes\[$Color_Reset\]" "\n$SIMPLE"
     else
         export PS1=$SIMPLE;
     fi;
