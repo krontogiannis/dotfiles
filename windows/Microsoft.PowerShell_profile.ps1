@@ -13,9 +13,9 @@ function global:prompt {
 }
 
 function global:Start-ElevatedPrompt {
-	if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { 
-		Start-Process powershell.exe "-NoLogo -NoProfile -NoExit -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs 
-	}
+    if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { 
+        Start-Process powershell.exe "-NoLogo -NoProfile -NoExit -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs 
+    }
 }
 
 Set-Alias sudo Start-ElevatedPrompt 
@@ -26,4 +26,3 @@ Write-Host "Current directory : $PWD" -ForegroundColor Yellow
 Write-Host " "
 
 Import-Module posh-git
-
